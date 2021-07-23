@@ -1,0 +1,121 @@
+.overlay
+{
+ position: absolute;
+ top: 0;
+ background-color: rgba(7, 10, 10, 0.253);
+ height: 100vh;
+ width: 100vw;
+}
+.popup
+{
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+
+}
+.header
+{
+    background-color: rgb(6, 139, 139);
+    height: 4rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+.header h3
+{
+    margin: 0;
+    color: #fff;
+}
+
+.container
+{
+    padding : 0 2rem;
+}
+
+.textBox
+{
+    width: 95%;
+    padding: 1.5%;
+}
+.group 
+{
+    padding-left: 40%;
+    margin-bottom: 1rem;
+}
+.group p
+{
+  margin-left: 1rem;
+  display: inline;
+}
+
+#red::before , #green::before 
+{
+    content: "";
+   display: inline-block;
+   height: .8rem;
+   width: .8rem;
+   border-radius: 50%;
+}
+#red::before
+{
+    background-color: rgb(240, 88, 88);
+}
+#green::before
+{
+    background-color: rgb(61, 240, 76);
+}
+
+select
+{
+    margin: .5rem 0;
+    padding: 2%;
+    width: 90%;
+}
+
+.blueBox{
+    border: rgb(14, 157, 223) solid 2px;
+    padding: 1rem;
+}
+
+.addBtn
+{
+    padding: 2%;
+    background: transparent;
+    color: rgb(20, 192, 20);
+    text-decoration: underline;
+    border: none;
+    cursor: pointer;
+}
+
+
+.footer
+{
+    position: absolute;
+    bottom: 4rem;
+}
+#save
+{
+    background-color: rgb(12, 219, 150);
+    border: none;
+    border-radius: 5px;
+    padding: .5rem 1.5rem;
+    color: #fff;
+    margin-right: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+#cancel
+{
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 0, 0, 0.671);
+    cursor: pointer;
+}
