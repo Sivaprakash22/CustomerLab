@@ -1,11 +1,20 @@
+import { useState,useEffect } from "react";
 import "./Popup.css"
 function Popup() {
 
-    const segmentData = {
-        
-    }
-  
+ const [segments,setSegments] = useState(["First Name", "Last Name","Gender"," Age","Account Name","City","State"]) 
+ const [blueBox,setBlueBox] = useState([segments]);
 
+ const addDropDownToBlueBox =()=>{
+   let newDropDown = blueBox;
+   newDropDown.push(segments);
+   console.log(newDropDown);
+   setBlueBox([...newDropDown]);
+ }
+
+  // useEffect(()=>{
+     
+  // },[blueBox])
 
 
   return (
@@ -24,10 +33,15 @@ function Popup() {
          </div>
 
         <div className="blueBox">
-        <select >
-             <option defaultValue="Add schema to segment" selected hidden className="opt">Add schema to segment</option>
-             <option className="opt">Hello</option>
-        </select>
+        {
+           blueBox.map((dropDown,index) =>
+            <select>
+                  <option key={index} defaultValue="Add schema to segment" selected hidden className="opt">Add schema to segment</option>
+                  {
+                    dropDown.map(dropDownItem=><option key={index+dropDownItem} className="opt" defaultValue={dropDownItem}>{dropDownItem}</option>)
+                  }
+            </select>)
+        }
         </div>
 
         <select >
@@ -36,7 +50,7 @@ function Popup() {
         </select>
 
 
-        <button className="addBtn" > + Add new schema</button>
+        <button className="addBtn" onClick={()=>addDropDownToBlueBox()} > + Add new schema</button>
 
        <div className="footer">
        <button id="save">Save the segment</button>
